@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #121212; 
+    color: #e0e0e0; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,7 +16,7 @@ body {
   .sidebar {
     width: 250px;
     height:300px;
-    background-color: #1e1e1e; /* Gris más claro */
+    background-color: #1e1e1e;
     padding: 15px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     flex-shrink: 0;
@@ -36,7 +36,7 @@ body {
   
   .navbar a {
     text-decoration: none;
-    color: #e0e0e0; /* Color de texto */
+    color: #e0e0e0; 
     display: block;
     padding: 10px;
     border-radius: 5px;
@@ -137,7 +137,7 @@ body {
   }
   
   .card button:hover {
-    background-color: #c0e085;
+    background-color: #c5e085;
     transform: translateY(-2px);
     color: #333;
   }
@@ -149,8 +149,8 @@ body {
   
   footer {
     width: 100%;
-    background-color: #acab84;
-    padding: 20px 15px; /* Incrementar padding para mayor grosor */
+    background-color: #f3795a;
+    padding: 20px 15px; 
     text-align: center;
     margin-top: auto;
     color: #333;
