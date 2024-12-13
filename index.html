@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  < class="container">
+    <aside class="sidebar">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#" id="artists-link">Artistas</a></li>
+          <li><a href="#">Álbumes</a></li>
+          <li><a href="#">Listas</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">
+              <span class="icon">👤</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Perfil</a>
+              <a href="#">Reservas</a>
+              <a href="#">Configuración</a>
+              <hr>
+              <a href="#">Cerrar sesión</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="home-content" class="visible">
+        <h2>Bienvenido a tu aplicación de música</h2>
+        <p>Selecciona una opción en el menú para comenzar a explorar</p>
+      </section>
+
+      <section id="artists-content" class="hidden">
+        <h2>Artistas</h2>
+        <div class="cards-container">
+          <div class="card">
+            <h3>Artista 1</h3>
+            <p>Género: Rock</p>
+            <button class="play-artist">▶ Reproducir</button>
+          </div>
+          <div class="card">
+            <h3>Artista 2</h3>
+            <p>Género: Pop</p>
+            <button class="play-artist">▶ Reproducir</button>
+          </div>
+          <div class="card">
+            <h3>Artista 3</h3>
+            <p>Género: Jazz</p>
+            <button class="play-artist">▶ Reproducir</button>
+          </div>
+          <div class="card">
+            <h3>Artista 4</h3>
+            <p>Género: Electrónica</p>
+            <button class="play-artist">▶ Reproducir</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  <div>
+
+    <footer>
+      <p>© 2024 Tu aplicación de música</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
