@@ -3,73 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>player</title>
+  <title>Player</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <class="container">
-    <aside class="sidebar">
-      <nav class="navbar">
-        <ul>
-          <li><a href="#" class="active">Inicio</a></li>
-          <li><a href="#" id="artists-link">Artistas</a></li>
-          <li><a href="#">Álbumes</a></li>
-          <li><a href="#">Listas</a></li>
-          <li class="dropdown">
-            <button class="dropbtn">
-              <span class="icon">👤</span>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">Perfil</a>
-              <a href="#">Reservas</a>
-              <a href="#">Configuración</a>
-              <hr>
-              <a href="#">Cerrar sesión</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PLAYER</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="artists-link">Artistas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Álbumes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Listas</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                👤
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Reservas</a></li>
+                <li><a class="dropdown-item" href="#">Configuración</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <main class="content">
+    <main class="content mt-4">
       <section id="home-content" class="visible">
-        <h2>Bienvenido a tu aplicación de música</h2>
+        <h2>Escuchate todo</h2>
         <p>Selecciona una opción en el menú para comenzar a explorar</p>
       </section>
 
       <section id="artists-content" class="hidden">
         <h2>Artistas</h2>
-        <div class="cards-container">
-          <div class="card">
-            <h3>Artista 1</h3>
-            <p>Género: Rock</p>
-            <button class="play-artist">▶ Reproducir</button>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 1">
+              <h3>Artista 1</h3>
+              <p>Género: Rock</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
           </div>
-          <div class="card">
-            <h3>Artista 2</h3>
-            <p>Género: Pop</p>
-            <button class="play-artist">▶ Reproducir</button>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 2">
+              <h3>Artista 2</h3>
+              <p>Género: Pop</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
           </div>
-          <div class="card">
-            <h3>Artista 3</h3>
-            <p>Género: Jazz</p>
-            <button class="play-artist">▶ Reproducir</button>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 3">
+              <h3>Artista 3</h3>
+              <p>Género: Jazz</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
           </div>
-          <div class="card">
-            <h3>Artista 4</h3>
-            <p>Género: Electrónica</p>
-            <button class="play-artist">▶ Reproducir</button>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 4">
+              <h3>Artista 4</h3>
+              <p>Género: Electrónica</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 5">
+              <h3>Artista 5</h3>
+              <p>Género: Reggaeton</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 6">
+              <h3>Artista 6</h3>
+              <p>Género: Indie</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 7">
+              <h3>Artista 7</h3>
+              <p>Género: Clásica</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artista 8">
+              <h3>Artista 8</h3>
+              <p>Género: Blues</p>
+              <button class="btn btn-primary">▶ Reproducir</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
-  <div>
-
-    <footer>
-      <p>© 2024 Tu aplicación de música</p>
-    </footer>
   </div>
 
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p>PLAYER © 2024 - No dejes de escuchar</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
