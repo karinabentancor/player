@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -11,7 +12,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:self-end; 
     background-color: #1e1e1e;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -42,7 +43,7 @@ body {
 }
 
 .navbar .menu a:hover {
-    color: #c5e085;
+    color: #777777;
 }
 
 .navbar .menu-icon {
@@ -63,7 +64,7 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin-top: 70px; /* Added margin for navbar space */
+    margin-top: 70px; 
 }
 
 .content {
@@ -107,7 +108,7 @@ body {
 }
 
 .card button:hover {
-    background-color: #c5e085;
+    background-color: #acacac;
     transform: translateY(-2px);
     color: #333;
 }
@@ -117,20 +118,15 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-footer {
-    width: 100%;
-    background-color: #f3795a;
-    padding: 20px 15px; 
-    text-align: center;
-    margin-top: auto;
-    color: #333;
+.footer { 
+background-color: #333;
 }
 
 footer p {
     margin: 0;
 }
 
-/* Estilos responsive */
+
 @media (max-width: 768px) {
     .navbar .menu {
         display: none;
@@ -156,7 +152,7 @@ footer p {
     }
 
     .cards-container {
-        grid-template-columns: repeat(1, 1fr); /* One column on small screens */
+        grid-template-columns: repeat(1, 1fr); /* one column on small screens */
         grid-template-rows: repeat(2, auto);
     }
 }

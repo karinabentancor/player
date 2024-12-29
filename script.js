@@ -1,13 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const artistsLink = document.getElementById('artists-link');
-    const homeContent = document.getElementById('home-content');
-    const artistsContent = document.getElementById('artists-content');
-  
-    artistsLink.addEventListener('click', () => {
-      homeContent.classList.remove('visible');
-      homeContent.classList.add('hidden');
-      artistsContent.classList.remove('hidden');
-      artistsContent.classList.add('visible');
+  const playButtons = document.querySelectorAll('.btn-dark');
+
+  playButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const artistNumber = index + 1;
+      const audioPath = `audio/artist${artistNumber}/placebo - karina bentancor.wav`;
+
+      let audioPlayer = document.getElementById('audio-player');
+      if (!audioPlayer) {
+        audioPlayer = document.createElement('audio');
+        audioPlayer.id = 'audio-player';
+        document.body.appendChild(audioPlayer);
+      }
+
+      if (audioPlayer.src.includes(audioPath)) {
+        if (!audioPlayer.paused) {
+          audioPlayer.pause();
+          button.textContent = "▶ Reproducir";
+        } else {
+          audioPlayer.play();
+          button.textContent = "⏸ Pausar";
+        }
+      } else {
+        playButtons.forEach((btn) => (btn.textContent = "▶ Reproducir"));
+        audioPlayer.pause();
+        audioPlayer.src = audioPath;
+        audioPlayer.play();
+        button.textContent = "⏸ Pausar";
+      }
+
+      audioPlayer.onended = () => {
+        button.textContent = "▶ Reproducir";
+      };
     });
   });
-  
+});
