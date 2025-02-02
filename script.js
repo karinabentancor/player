@@ -35,3 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(function(card) {
+    const artistTitle = card.querySelector('h3');
+
+    artistTitle.addEventListener('click', function() {
+      // Cambia el nombre del archivo según el artista
+      const artistName = artistTitle.textContent.trim().toLowerCase().replace(/\s+/g, '');
+      window.location.href = `${artistName}.html`;
+    });
+  });
+});
