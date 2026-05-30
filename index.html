@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,120 +8,263 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">PLAYER</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                👤
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                <li><a class="dropdown-item" href="#">Biblioteca</a></li>
-                <li><a class="dropdown-item" href="#">Configuración</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+
+  <nav class="navbar">
+    <span class="logo">PLAYER</span>
+    <div class="nav-icon">
+      <div class="nav-dropdown">
+        <button class="nav-avatar" id="avatarBtn" aria-label="Menú de usuario">👤</button>
+        <ul class="dropdown-menu-custom" id="dropdownMenu">
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Biblioteca</a></li>
+          <li><a href="#">Configuración</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </ul>
       </div>
-    </nav>
-
-
-      <div class="home-text" id="home-content" class="visible">
-        <h2>Escuchate todo</h2>
-        <p>Something to say</p>
     </div>
-      <section id="artists-content" class="hidden">
+  </nav>
 
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-
-            <div class="form-check form-switch" id="switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck" />
-              <label class="form-check-label" for="flexSwitchCheck">Todos lxs artistas</label>
-            </div>
-            <div class="card">
-              <img src="media/img/albums/20km.png" class="card-img-top" alt="Artist 1">
-              <h3>Artista 1</h3>
-              <p>Rock</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="media/img/albums/molino.jpg" class="card-img-top" alt="Artist 2">
-              <h3>Artista 2</h3>
-              <p>Pop</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="" class="card-img-top" alt="Artist 3">
-              <h3>Artista 3</h3>
-              <p>Jazz</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artist 4">
-              <h3>Artista 4</h3>
-              <p>Electrónica</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artist 5">
-              <h3>Artista 5</h3>
-              <p>Experimental</p>
-              <button class="btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artist 6">
-              <h3>Artista 6</h3>
-              <p>Indie</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artist 7">
-              <h3>Artista 7</h3>
-              <p>Clásica</p>
-              <button class="btn btn-dark">▶ Reproducir</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 mb-3">
-            <div class="card">
-              <img src="https://via.placeholder.com/150" class="card-img-top" alt="Artist 8">
-              <h3>Artista 8</h3>
-              <p>Blues</p>
-              <button class="btn btn-dark" data-audio-path="/media/audio/artists/artist-1/24H.mp3">▶ Reproducir</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+  <div class="tabs">
+    <button class="tab active" data-tab="home">Inicio</button>
+    <button class="tab" data-tab="artists">Artistas</button>
+    <button class="tab" data-tab="shows">Shows</button>
   </div>
 
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>PLAYER   -  NO DEJES DE ESCUCHAR  </p>
+  <!-- INICIO -->
+  <section id="home" class="section active">
+    <div class="hero">
+      <h1 class="hero-title">Descubrí<br><span>algo nuevo.</span></h1>
+      <p class="hero-sub">Escuchá lo que todavía no sabés que te gusta.</p>
+    </div>
+
+    <div class="section-label">Destacados de la semana</div>
+    <div class="discover-strip">
+      <div class="disc-card">
+        <div class="disc-img"><img src="media/img/albums/20km.png" alt="Artista 1"></div>
+        <div class="disc-info">
+          <div class="disc-name">Artista 1</div>
+          <div class="disc-genre">Rock</div>
+        </div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-img"><img src="media/img/albums/molino.jpg" alt="Artista 3"></div>
+        <div class="disc-info">
+          <div class="disc-name">Artista 3</div>
+          <div class="disc-genre">Jazz</div>
+        </div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-img"></div>
+        <div class="disc-info">
+          <div class="disc-name">Artista 6</div>
+          <div class="disc-genre">Indie</div>
+        </div>
+      </div>
+      <div class="disc-card">
+        <div class="disc-img"></div>
+        <div class="disc-info">
+          <div class="disc-name">Artista 4</div>
+          <div class="disc-genre">Electrónica</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-label">Escuchados ahora</div>
+    <div class="feat-card">
+      <span class="feat-num">01</span>
+      <div class="feat-info">
+        <div class="feat-name">Artista 2</div>
+        <div class="feat-genre">Pop</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="feat-card">
+      <span class="feat-num">02</span>
+      <div class="feat-info">
+        <div class="feat-name">Artista 7</div>
+        <div class="feat-genre">Clásica</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="feat-card">
+      <span class="feat-num">03</span>
+      <div class="feat-info">
+        <div class="feat-name">Artista 5</div>
+        <div class="feat-genre">Experimental</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+  </section>
+
+  <!-- ARTISTAS -->
+  <section id="artists" class="section">
+    <div class="section-label" style="margin-top: 4px;">Todos los artistas</div>
+
+    <div class="artist-card">
+      <div class="artist-img-box"><img src="media/img/albums/20km.png" alt="Artista 1"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 1</div>
+        <div class="artist-genre">Rock</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"><img src="media/img/albums/molino.jpg" alt="Artista 2"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 2</div>
+        <div class="artist-genre">Pop</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 3</div>
+        <div class="artist-genre">Jazz</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 4</div>
+        <div class="artist-genre">Electrónica</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 5</div>
+        <div class="artist-genre">Experimental</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 6</div>
+        <div class="artist-genre">Indie</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 7</div>
+        <div class="artist-genre">Clásica</div>
+      </div>
+      <button class="play-btn" data-audio-path="">▶</button>
+    </div>
+    <div class="artist-card">
+      <div class="artist-img-box"></div>
+      <div class="artist-info">
+        <div class="artist-name">Artista 8</div>
+        <div class="artist-genre">Blues</div>
+      </div>
+      <button class="play-btn" data-audio-path="/media/audio/artists/artist-1/24H.mp3">▶</button>
+    </div>
+  </section>
+
+  <!-- SHOWS -->
+  <section id="shows" class="section">
+    <div class="section-label" style="margin-top: 4px;">Próximos shows</div>
+
+    <div class="show-card"
+      data-band="Los Planetas"
+      data-date="Vie 13 Jun · La Trastienda, MVD"
+      data-genre="Rock alternativo"
+      data-desc="Directo poderoso desde España con 30 años de trayectoria imparable."
+      data-price="$650"
+      data-avail="Agotadas pronto"
+      data-dur="2hs aprox">
+      <div class="show-date">Vie 13 Jun — La Trastienda</div>
+      <div class="show-band">Los Planetas</div>
+      <div class="show-venue">Montevideo</div>
+      <span class="show-tag">Rock alternativo</span>
+      <div class="show-footer">
+        <div class="show-price">Desde <strong>$650</strong></div>
+        <button class="ticket-btn">Entradas</button>
+      </div>
+    </div>
+
+    <div class="show-card"
+      data-band="Terranova"
+      data-date="Sáb 21 Jun · Espacio Mónaco, MVD"
+      data-genre="Electrónica / Live"
+      data-desc="Proyecto audiovisual con visuales generativos en tiempo real."
+      data-price="$450"
+      data-avail="Lugares limitados"
+      data-dur="1h 30min aprox">
+      <div class="show-date">Sáb 21 Jun — Espacio Mónaco</div>
+      <div class="show-band">Terranova</div>
+      <div class="show-venue">Montevideo</div>
+      <span class="show-tag">Electrónica / Live</span>
+      <div class="show-footer">
+        <div class="show-price">Desde <strong>$450</strong></div>
+        <button class="ticket-btn">Entradas</button>
+      </div>
+    </div>
+
+    <div class="show-card"
+      data-band="Mingus Fantasy"
+      data-date="Jue 3 Jul · Bluzz Live, MVD"
+      data-genre="Jazz contemporáneo"
+      data-desc="Quinteto con raíces en el free jazz y la música del mundo. Improvisación total."
+      data-price="$380"
+      data-avail="Butacas disponibles"
+      data-dur="2hs aprox">
+      <div class="show-date">Jue 3 Jul — Bluzz Live</div>
+      <div class="show-band">Mingus Fantasy</div>
+      <div class="show-venue">Montevideo</div>
+      <span class="show-tag">Jazz contemporáneo</span>
+      <div class="show-footer">
+        <div class="show-price">Desde <strong>$380</strong></div>
+        <button class="ticket-btn">Entradas</button>
+      </div>
+    </div>
+
+    <div class="show-card"
+      data-band="Lucía Bofill"
+      data-date="Sáb 12 Jul · Teatro Solís, MVD"
+      data-genre="Indie / Folk"
+      data-desc="Cantautora que mezcla folk rioplatense con producción moderna y letras viscerales."
+      data-price="$520"
+      data-avail="Preventa activa"
+      data-dur="1h 45min aprox">
+      <div class="show-date">Sáb 12 Jul — Teatro Solís</div>
+      <div class="show-band">Lucía Bofill</div>
+      <div class="show-venue">Montevideo</div>
+      <span class="show-tag">Indie / Folk</span>
+      <div class="show-footer">
+        <div class="show-price">Desde <strong>$520</strong></div>
+        <button class="ticket-btn">Entradas</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+      <div class="modal-handle"></div>
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-date" id="m-date"></div>
+      <div class="modal-band" id="m-band"></div>
+      <p class="modal-desc" id="m-desc"></p>
+      <div class="modal-row"><span>Precio desde</span><span id="m-price"></span></div>
+      <div class="modal-row"><span>Disponibilidad</span><span id="m-avail" class="fluo"></span></div>
+      <div class="modal-row"><span>Duración estimada</span><span id="m-dur"></span></div>
+      <button class="modal-buy">Comprar entradas →</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>PLAYER — NO DEJES DE ESCUCHAR</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  <script src="/js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
