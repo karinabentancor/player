@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PLAYER</title>
+  <title>FLUX</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <nav class="navbar">
-    <span class="logo">PLAYER</span>
+    <span class="logo">FLUX</span>
     <div class="nav-icon">
       <div class="nav-dropdown">
         <button class="nav-avatar" id="avatarBtn" aria-label="Menú de usuario">👤</button>
@@ -31,7 +31,6 @@
     <button class="tab" data-tab="shows">Shows</button>
   </div>
 
-  <!-- INICIO -->
   <section id="home" class="section active">
     <div class="hero">
       <h1 class="hero-title">Descubrí<br><span>algo nuevo.</span></h1>
@@ -97,7 +96,6 @@
     </div>
   </section>
 
-  <!-- ARTISTAS -->
   <section id="artists" class="section">
     <div class="section-label" style="margin-top: 4px;">Todos los artistas</div>
 
@@ -167,38 +165,17 @@
     </div>
   </section>
 
-  <!-- SHOWS -->
   <section id="shows" class="section">
     <div class="section-label" style="margin-top: 4px;">Próximos shows</div>
-
-    <div class="show-card"
-      data-band="Los Planetas"
-      data-date="Vie 13 Jun · La Trastienda, MVD"
-      data-genre="Rock alternativo"
-      data-desc="Directo poderoso desde España con 30 años de trayectoria imparable."
-      data-price="$650"
-      data-avail="Agotadas pronto"
-      data-dur="2hs aprox">
-      <div class="show-date">Vie 13 Jun — La Trastienda</div>
-      <div class="show-band">Los Planetas</div>
-      <div class="show-venue">Montevideo</div>
-      <span class="show-tag">Rock alternativo</span>
-      <div class="show-footer">
-        <div class="show-price">Desde <strong>$650</strong></div>
-        <button class="ticket-btn">Entradas</button>
-      </div>
-    </div>
 
     <div class="show-card"
       data-band="Terranova"
       data-date="Sáb 21 Jun · Espacio Mónaco, MVD"
       data-genre="Electrónica / Live"
       data-desc="Proyecto audiovisual con visuales generativos en tiempo real."
-      data-price="$450"
-      data-avail="Lugares limitados"
-      data-dur="1h 30min aprox">
-      <div class="show-date">Sáb 21 Jun — Espacio Mónaco</div>
+      data-price="450">
       <div class="show-band">Terranova</div>
+      <div class="show-day">Sáb 21 Jun — Espacio Mónaco</div>
       <div class="show-venue">Montevideo</div>
       <span class="show-tag">Electrónica / Live</span>
       <div class="show-footer">
@@ -212,55 +189,72 @@
       data-date="Jue 3 Jul · Bluzz Live, MVD"
       data-genre="Jazz contemporáneo"
       data-desc="Quinteto con raíces en el free jazz y la música del mundo. Improvisación total."
-      data-price="$380"
-      data-avail="Butacas disponibles"
-      data-dur="2hs aprox">
-      <div class="show-date">Jue 3 Jul — Bluzz Live</div>
+      data-price="450">
       <div class="show-band">Mingus Fantasy</div>
+      <div class="show-day">Jue 3 Jul — Bluzz Live</div>
       <div class="show-venue">Montevideo</div>
       <span class="show-tag">Jazz contemporáneo</span>
       <div class="show-footer">
-        <div class="show-price">Desde <strong>$380</strong></div>
-        <button class="ticket-btn">Entradas</button>
-      </div>
-    </div>
-
-    <div class="show-card"
-      data-band="Lucía Bofill"
-      data-date="Sáb 12 Jul · Teatro Solís, MVD"
-      data-genre="Indie / Folk"
-      data-desc="Cantautora que mezcla folk rioplatense con producción moderna y letras viscerales."
-      data-price="$520"
-      data-avail="Preventa activa"
-      data-dur="1h 45min aprox">
-      <div class="show-date">Sáb 12 Jul — Teatro Solís</div>
-      <div class="show-band">Lucía Bofill</div>
-      <div class="show-venue">Montevideo</div>
-      <span class="show-tag">Indie / Folk</span>
-      <div class="show-footer">
-        <div class="show-price">Desde <strong>$520</strong></div>
+        <div class="show-price">Desde <strong>$450</strong></div>
         <button class="ticket-btn">Entradas</button>
       </div>
     </div>
   </section>
 
-  <!-- MODAL -->
   <div class="modal-overlay" id="modal">
-    <div class="modal-box">
+    <div class="modal-box" id="modal-info">
       <div class="modal-handle"></div>
       <button class="modal-close" id="modalClose">✕</button>
-      <div class="modal-date" id="m-date"></div>
       <div class="modal-band" id="m-band"></div>
       <p class="modal-desc" id="m-desc"></p>
-      <div class="modal-row"><span>Precio desde</span><span id="m-price"></span></div>
-      <div class="modal-row"><span>Disponibilidad</span><span id="m-avail" class="fluo"></span></div>
-      <div class="modal-row"><span>Duración estimada</span><span id="m-dur"></span></div>
-      <button class="modal-buy">Comprar entradas →</button>
+      <div class="modal-genre" id="m-genre"></div>
+      <div class="modal-date-block" id="m-date"></div>
+      <div class="modal-counter-row">
+        <span class="modal-counter-label">Entradas</span>
+        <div class="modal-counter">
+          <button class="counter-btn" id="counter-minus">−</button>
+          <span class="counter-val" id="counter-val">1</span>
+          <button class="counter-btn" id="counter-plus">+</button>
+        </div>
+      </div>
+      <div class="coupon-toggle" id="coupon-toggle">
+        <span>Tengo un cupón de descuento</span>
+        <span class="coupon-arrow" id="coupon-arrow">+</span>
+      </div>
+      <div class="coupon-box" id="coupon-box">
+        <div class="coupon-inputs">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+          <input class="coupon-digit" maxlength="1" type="text" inputmode="numeric">
+        </div>
+        <div class="coupon-msg" id="coupon-msg"></div>
+      </div>
+      <div class="modal-total-row">
+        <span>Total</span>
+        <span class="modal-total" id="m-total"></span>
+      </div>
+      <button class="modal-buy" id="modal-buy-btn">Comprar entradas</button>
+    </div>
+
+    <div class="modal-box modal-confirm" id="modal-confirm" style="display:none;">
+      <div class="modal-handle"></div>
+      <button class="modal-close" id="confirmClose">✕</button>
+      <div class="confirm-icon">✓</div>
+      <div class="confirm-title">¡Listo!</div>
+      <p class="confirm-sub">Tu compra fue procesada.</p>
+      <div class="confirm-row"><span>Show</span><span id="c-band"></span></div>
+      <div class="confirm-row"><span>Fecha</span><span id="c-date"></span></div>
+      <div class="confirm-row"><span>Entradas</span><span id="c-qty"></span></div>
+      <div class="confirm-row"><span>Total</span><span id="c-total" class="fluo"></span></div>
+      <button class="modal-buy" id="confirm-done-btn">Cerrar</button>
     </div>
   </div>
 
   <footer>
-    <p>PLAYER — NO DEJES DE ESCUCHAR</p>
+    <p>FLUX — NO DEJES DE ESCUCHAR</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
